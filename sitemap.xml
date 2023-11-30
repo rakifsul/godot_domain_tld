@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://godot.rakifsul.my.id/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://godot.rakifsul.my.id/</loc>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/belajar-godot-engine-3-cara-membuat-project.html</loc>
+<lastmod>2023-11-24T20:26:31+07:00</lastmod>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/2/langkah-1-1024x631.png</image:loc>
+<image:title><![CDATA[langkah 1]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/2/langkah-2-1024x631.png</image:loc>
+<image:title><![CDATA[langkah 2]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/2/langkah-3-1024x555.png</image:loc>
+<image:title><![CDATA[langkah 3]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/2/Godot_v3.5.2-stable_win64_bMgL8SH6vS.png</image:loc>
+<image:title><![CDATA[langkah 4]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/2/Godot_v3.5.2-stable_win64_PmMPj3jpwB.png</image:loc>
+<image:title><![CDATA[langkah 5]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/2/Godot_v3.5.2-stable_win64_NJFkTN13r5.png</image:loc>
+<image:title><![CDATA[selesai]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-autoload.html</loc>
+<lastmod>2023-11-27T05:26:02+07:00</lastmod>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/9/gambar1-2.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-immediate-geometry.html</loc>
+<lastmod>2023-11-27T05:52:04+07:00</lastmod>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/10/Godot_v3.5.2-stable_win64_FKet5O6l2j.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-input-event.html</loc>
+<lastmod>2023-11-27T05:01:03+07:00</lastmod>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-keyboard-input.html</loc>
+<lastmod>2023-11-27T00:35:47+07:00</lastmod>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-mouse-input.html</loc>
+<lastmod>2023-11-27T00:52:48+07:00</lastmod>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/belajar-godot-engine-4-cara-membuat-project.html</loc>
+<lastmod>2023-11-24T20:26:25+07:00</lastmod>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_anMRmp85Mu.png</image:loc>
+<image:title><![CDATA[langkah 1]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_TNUTHP7h6j.png</image:loc>
+<image:title><![CDATA[langkah 2]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_BJTzPc5aOC.png</image:loc>
+<image:title><![CDATA[langkah 3]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_5mC9Q8wjf0.png</image:loc>
+<image:title><![CDATA[langkah 4]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_DN936Ga5FJ.png</image:loc>
+<image:title><![CDATA[selesai]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/google276234969f0f24a8.html</loc>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-nav-mesh-agent-sederhana.html</loc>
+<lastmod>2023-11-29T05:04:34+07:00</lastmod>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-predictive-turret-aim.html</loc>
+<lastmod>2023-11-29T05:00:30+07:00</lastmod>
+</url>
+<url>
+<loc>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-simple-turret-aim.html</loc>
+<lastmod>2023-11-29T04:50:45+07:00</lastmod>
+</url>
+</urlset>

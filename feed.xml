@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>RAKIFSUL GODOT</title>
+    <link href="https://godot.rakifsul.my.id/feed.xml" rel="self" />
+    <link href="https://godot.rakifsul.my.id" />
+    <updated>2023-11-29T05:04:34+07:00</updated>
+    <author>
+        <name>RAKIFSUL</name>
+    </author>
+    <id>https://godot.rakifsul.my.id</id>
+
+    <entry>
+        <title>Studi Kasus Godot Engine 3 - Nav Mesh Agent Sederhana</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-nav-mesh-agent-sederhana.html"/>
+        <id>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-nav-mesh-agent-sederhana.html</id>
+            <category term="Studi Kasus Godot Engine 3"/>
+
+        <updated>2023-11-29T05:04:34+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Godot Engine 3 adalah game engine yang cukup lengkap fiturnya. Salah satu kelengkapannya dibuktikan dengan adanya fitur pathfinding. Fitur pathfinding tersebut diwujudkan dengan penggunaan Navigation Mesh atau NavMesh. Sayangnya, fitur tersebut belum dilengkapi dengan agent-nya. Jadi, belum ada NavMeshAgent di Godot Engine versi 3.4, setahu&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Godot Engine 3 adalah game engine yang cukup lengkap fiturnya.</p>
+<p>Salah satu kelengkapannya dibuktikan dengan adanya fitur pathfinding.</p>
+<p>Fitur pathfinding tersebut diwujudkan dengan penggunaan Navigation Mesh atau  NavMesh.</p>
+<p>Sayangnya, fitur tersebut belum dilengkapi dengan agent-nya.</p>
+<p>Jadi, belum ada NavMeshAgent di Godot Engine versi 3.4, setahu saya, saat tulisan ini dibuat.</p>
+<p>Oleh karena itu, saya mencoba mencari solusinya.</p>
+<p>Caranya dengan membuat script NavMeshAgent buatan saya sendiri.</p>
+<p>Script Godot Engine ini menggunakan fitur pathfinding dari fitur NavMesh yang disediakan oleh Godot Engine.</p>
+<p>Jika sampai di sini Anda belum paham dengan kata-kata saya  tadi, sebenarnya NavMeshAgent yang saya buat ini kurang lebih mirip dengan yang ada di Unity.</p>
+<p>Hanya saja ini buatan sendiri.</p>
+<p>Dalam project ini, saya membuat karakter capsule sederhana yang ditempatkan di atas plane.</p>
+<p>Di plane ada obstacle-nya berupa cube.</p>
+<p>Saat NavMesh sudah di-generate, maka pathfinding bisa dilakukan.</p>
+<p>NavMeshAgent saya kemudian mencari path, kemudian berjalan melaluinya sebisa mungkin sambil menghindari obstacle.</p>
+<p>NavMeshAgent ini bekerja dengan mengubah input posisi target menjadi array posisi path node.</p>
+<p>Adapun posisi target diperoleh dengan mengubah posisi kursor di koordinat layar menjadi posisi di ruang 3D.</p>
+<p>Manfaat dari script ini adalah untuk memberikan gambaran kepada Anda tentang bagaimana memanfaatkan path yang ditemukan dari pathfinding dan menerapkannya pada agent.</p>
+<p>Disclaimer:</p>
+<ul>
+<li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
+<li>Saya tidak menjamin bahwa Anda akan paham dengan isi studi kasus ini.</li>
+</ul>
+<p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Studi Kasus Godot Engine 3 - Predictive Turret Aim</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-predictive-turret-aim.html"/>
+        <id>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-predictive-turret-aim.html</id>
+            <category term="Studi Kasus Godot Engine 3"/>
+
+        <updated>2023-11-29T05:00:30+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Jika Anda telah membaca postingan ini, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim. Di postingan tersebut, dijelaskan bahwa turret adalah meriam statis. Adapun meriam statis tersebut memiliki ujung berlubang tempat keluarnya peluru yang disebut muzzle. Di studi kasus ini, kita&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Jika Anda telah membaca <a href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-simple-turret-aim.html">postingan ini</a>, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim.</p>
+<p>Di postingan tersebut, dijelaskan bahwa turret adalah meriam statis.</p>
+<p>Adapun meriam statis tersebut memiliki ujung berlubang tempat keluarnya peluru yang disebut muzzle.</p>
+<p>Di studi kasus ini, kita juga menggunakan meriam statis.</p>
+<p>Akan tetapi kalkulasi dan tujuannya berbeda.</p>
+<p>Jika pada studi kasus simple turret aim tidak ada jaminan bahwa peluru akan berbenturan dengan target tepat di titik yang ditunjuk kursor mouse, pada studi kasus ini peluru akan berbenturan mendekati target di titik yang ditunjuk kursor mouse.</p>
+<p>Tunggu! Kenapa saya bilang "mendekati"?</p>
+<p>Karena, pada saat saya merancang scene nya, ada jarak antara ujung moncong turret dengan titik spawn dari bullet. Logikanya, pasti ada selisihnya.</p>
+<p>OK, kita lanjut...</p>
+<p>Adapun kalkulasi pada sistem turret ini lebih kompleks.</p>
+<p>Diharapkan setidaknya Anda telah mengenal gerak parabola di ilmu fisika.</p>
+<p>Itu karena kita akan mencari v0 dari gerak parabola tersebut.</p>
+<p>Bagaimana caranya? Beli studi kasus ini.</p>
+<p>Disclaimer:</p>
+<ul>
+<li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
+<li>Saya tidak menjamin bahwa Anda akan paham dengan isi studi kasus ini.</li>
+</ul>
+<p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Studi Kasus Godot Engine 3 - Simple Turret Aim</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-simple-turret-aim.html"/>
+        <id>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-simple-turret-aim.html</id>
+            <category term="Studi Kasus Godot Engine 3"/>
+
+        <updated>2023-11-29T04:50:45+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Di dalam game yang ada fitur tembak menembaknya, tidak jarang digunakan turret. Turret adalah sejenis meriam yang posisinya biasanya statis, setidaknya itu definisi saya. Pada ujung turret ada sebuah bagian berlubang tempat keluarnya peluru yang disebut muzzle. Jadi, Anda bisa ambil mudahnya bahwa turret bisa&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Di dalam game yang ada fitur tembak menembaknya, tidak jarang digunakan turret.</p>
+<p>Turret adalah sejenis meriam yang posisinya biasanya statis, setidaknya itu definisi saya.</p>
+<p>Pada ujung turret ada sebuah bagian berlubang tempat keluarnya peluru yang disebut muzzle.</p>
+<p>Jadi, Anda bisa ambil mudahnya bahwa turret bisa diserupai dengan meriam statis.</p>
+<p>Pada game tembak-menembak, turret dirancang untuk menembaki lawan.</p>
+<p>Untuk dapat menembak lawan dengan tepat, maka turret harus membidik.</p>
+<p>Membidik tersebutlah yang dimaksud dengan aim.</p>
+<p>Dengan kata lain, simple turret aim adalah sistem pembidikan turret secara sederhana.</p>
+<p>Lalu, apa yang sederhana?</p>
+<p>Yang sederhana adalah kalkulasinya.</p>
+<p>Pada studi kasus ini, dibahas cara membidik turret agar muzzle-nya mengarah ke titik yang ditunjukkan kursor mouse pada ruang 3D dari world.</p>
+<p>Walaupun muzzle mengarah ke target tersebut, kita tidak bisa memastikan bahwa peluru akan persis berbentur ke sana, karena pelurunya berupa rigidbody yang terpengaruhi gravitasi.</p>
+<p>Karena itu juga sistem ini disebut sederhana.</p>
+<p>Memang ada studi kasus saya yang lainnya, yakni predictive turret aim.</p>
+<p>Tapi itu berbeda dengan yang ini, karena yang predictive tadi benar-benar merencanakan jatuhnya peluru pada titik yang ditunjuk kursor mouse.</p>
+<p>Kalkulasi dalam simple turret aim ini lebih sederhana daripada yang predictive.</p>
+<p>Bagaimana cara melakukannya? Belilah konten studi kasus ini.</p>
+<p>Disclaimer:</p>
+<ul>
+<li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
+<li>Saya tidak menjamin bahwa Anda akan paham dengan isi studi kasus ini.</li>
+</ul>
+<p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Belajar Godot Engine 3 - Mengenal Immediate Geometry</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-immediate-geometry.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-immediate-geometry.html</id>
+            <category term="Dasar Godot Engine 3"/>
+
+        <updated>2023-11-27T05:52:04+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Kali ini, kita akan belajar Immediate Geometry di Godot Engine 3. Dengan Immediate Geometry, kita bisa menggambar vertex di ruang 3D. Hal ini berguna ketika kita membuat sebuah karakter yang kompleks yang membutuhkan visualisasi dari komponen-komponen yang bekerja di belakang layar. Sebagai contoh, jika&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Kali ini, kita akan belajar Immediate Geometry di Godot Engine 3.</p>
+<p>Dengan Immediate Geometry, kita bisa menggambar vertex di ruang 3D.</p>
+<p>Hal ini berguna ketika kita membuat sebuah karakter yang kompleks yang membutuhkan visualisasi dari komponen-komponen yang bekerja di belakang layar.</p>
+<p>Sebagai contoh, jika Anda membuat NavMesh Agent dengan Godot Engine, maka karakter tersebut mungkin membutuhkan visualisasi dari path yang ditemukan.</p>
+<p>Oleh karena itu, Immediate Geometry bisa dianggap cukup penting untuk visual debugging.</p>
+<h2>Tujuan</h2>
+<p>Tujuan dari tutorial ini adalah:</p>
+<ul>
+<li>Pembaca mengenal Immediate Geometry dan dapat menggambar vertex dengannya.</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat dari tutorial ini adalah:</p>
+<ul>
+<li>Menggunakan Godot Engine 3</li>
+<li>Pernah coding sebelumnya</li>
+<li>Pernah belajar materi matematika untuk 3D game development</li>
+<li>Mengetahui dasar-dasar Godot Engine 3 untuk 3D.</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Pertama, buatlah project baru.</p>
+<p>Caranya telah dibahas <a href="https://godot.rakifsul.my.id/belajar-godot-engine-3-cara-membuat-project.html">di sini</a>.</p>
+<p>Selanjutnya, buat Spatial bernama World, kemudian save as "World.tscn".</p>
+<p>Jadi, sekarang Anda punya satu scene bernama "World.tscn".</p>
+<p>Pindahkan Scene tersebut ke dalam folder "Scenes".</p>
+<p>Jadi posisinya sekarang di "Scenes/World.tscn".</p>
+<p>Lalu, buat child Node seperti di gambar di bawah ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/10/Godot_v3.5.2-stable_win64_FKet5O6l2j.png" alt="" width="249" height="219" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/10/responsive/Godot_v3.5.2-stable_win64_FKet5O6l2j-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/10/responsive/Godot_v3.5.2-stable_win64_FKet5O6l2j-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/10/responsive/Godot_v3.5.2-stable_win64_FKet5O6l2j-md.png 768w ,https://godot.rakifsul.my.id/media/posts/10/responsive/Godot_v3.5.2-stable_win64_FKet5O6l2j-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/10/responsive/Godot_v3.5.2-stable_win64_FKet5O6l2j-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/10/responsive/Godot_v3.5.2-stable_win64_FKet5O6l2j-2xl.png 1600w"></figure>
+<p>Penjelasan:</p>
+<ul>
+<li>DebugDraw adalah ImmediateGeometry</li>
+<li>Sphere1 adalah MeshInstance dengan Mesh berupa Sphere</li>
+<li>Sphere2 adalah MeshInstance dengan Mesh berupa Sphere</li>
+<li>Camera adalah Camera</li>
+</ul>
+<p>Selanjutnya, buat script "Scripts/WorldDebugDraw.gd" dan isi dengan kode ini:</p>
+<pre class="language-python line-numbers"><code># file: WorldDebugDraw.gd
+
+# extend script ini dari ImmediateGeometry
+extends ImmediateGeometry
+
+# ambil referensi dari Node
+onready var sphere_1 = get_node("../Sphere1")
+onready var sphere_2 = get_node("../Sphere2")
+
+# abaikan
+func _ready():
+    pass
+
+# pada setiap frame. delta adalah selisih waktu antar frame
+func _process(delta):
+    # kita mengambil posisi masing-masing sphere dengan global_transform.origin
+    var pos_1 = sphere_1.global_transform.origin
+    var pos_2 = sphere_2.global_transform.origin
+
+    # begin: menggambar garis
+    begin(Mesh.PRIMITIVE_LINE_STRIP)
+
+    set_color(Color.red)
+    add_vertex(pos_1)
+    add_vertex(pos_2)
+
+    end()
+    # end: menggambar garis
+
+    # begin: menggambar sphere tambahan berwarna kuning
+    begin(Mesh.PRIMITIVE_TRIANGLES)
+    set_color(Color.yellow)
+    add_sphere(40,40,5, false)
+
+    end()
+    # end: menggambar sphere tambahan berwarna kuning</code></pre>
+<p>Kemudian, attach script di atas ke scene "World/DebugDraw".</p>
+<p>Selanjutnya, mainkan scene tersebut.</p>
+<p>Nanti akan muncul objek 3 bola dan 1 garis.</p>
+<h2>Pembahasan</h2>
+<p>Sekarang, lupakan 2 bola abu-abunya.</p>
+<p>Itu dibuat tanpa Immediate Geometry.</p>
+<p>Yang perlu Anda perhatikan adalah garis dan bola kuningnya.</p>
+<p>Itu karena kedua objek tersebut digambar dengan Immediate Geometry.</p>
+<p>Untuk penjelasannya, lihat kode ini:</p>
+<pre class="language-python line-numbers"><code># extend script ini dari ImmediateGeometry
+extends ImmediateGeometry
+
+# ambil referensi dari Node
+onready var sphere_1 = get_node("../Sphere1")
+onready var sphere_2 = get_node("../Sphere2")</code></pre>
+<p>Pertama, kode di atas meng-extend script dari ImmediateGeometry.</p>
+<p>Wajar, karena DebugDraw aslinya adalah ImmediateGeometry, kemudian di-rename namanya jadi DebugDraw.</p>
+<p>Selanjutnya, dapatkan referensi ke kedua Node MeshInstance sesuai kode di atas.</p>
+<p>Lalu, kita gambar bola kuning dan garis di tiap frame:</p>
+<pre class="language-python line-numbers"><code># pada setiap frame. delta adalah selisih waktu antar frame
+func _process(delta):
+    # kita mengambil posisi masing-masing sphere dengan global_transform.origin
+    var pos_1 = sphere_1.global_transform.origin
+    var pos_2 = sphere_2.global_transform.origin
+
+    # begin: menggambar garis
+    begin(Mesh.PRIMITIVE_LINE_STRIP)
+
+    set_color(Color.red)
+    add_vertex(pos_1)
+    add_vertex(pos_2)
+
+    end()
+    # end: menggambar garis
+
+    # begin: menggambar sphere tambahan berwarna kuning
+    begin(Mesh.PRIMITIVE_TRIANGLES)
+    set_color(Color.yellow)
+    add_sphere(40,40,5, false)
+
+    end()
+    # end: menggambar sphere tambahan berwarna kuning</code></pre>
+<p>Sisanya, baca komentar kode dan pikirkan.</p>
+<h2>Penutup</h2>
+<p>Sekarang, seharusnya Anda sudah paham tentang ImmediateGeometry.</p>
+<p>Selanjutnya, silakan praktekkan sendiri.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Belajar Godot Engine 3 - Mengenal Autoload</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-autoload.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-autoload.html</id>
+            <category term="Dasar Godot Engine 3"/>
+
+        <updated>2023-11-27T05:26:02+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Autoload adalah fitur Godot Engine 3 yang memungkinkan kita untuk meload script tertentu pada saat game dimulai. Selain itu, script yang diload juga bisa dibuat menjadi Singleton, sehingga hanya satu objek dari script tersebut yang dibuat. Hal tersebut berguna saat kita ingin membuat sebuah&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Autoload adalah fitur Godot Engine 3 yang memungkinkan kita untuk meload script tertentu pada saat game dimulai.</p>
+<p>Selain itu, script yang diload juga bisa dibuat menjadi Singleton, sehingga hanya satu objek dari script tersebut yang dibuat.</p>
+<p>Hal tersebut berguna saat kita ingin membuat sebuah Game Manager yang melacak score serta perpindahan level dalam game karena hal itu normalnya hanya membutuhkan satu objek saja.</p>
+<h2>Tujuan</h2>
+<p>Tujuan dari tutorial ini adalah:</p>
+<ul>
+<li>Pembaca memahami autoload dan dapat menggunakannya di saat diinginkan.</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat dari tutorial ini adalah;</p>
+<ul>
+<li>Menggunakan Godot Engine 3</li>
+<li>Telah mengenal Godot Engine 3 dan mencobanya</li>
+<li>Pernah coding sebelumnya</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Script yang digunakan dalam project ini ada 3:</p>
+<ul>
+<li>GameManager.gd</li>
+<li>Scene1.gd</li>
+<li>Scene2.gd</li>
+</ul>
+<p>Buatlah script "Scripts/Autoloads/GameManager.gd" dan isi dengan kode ini:</p>
+<pre class="language-python line-numbers"><code># file: GameManager.gd
+
+extends Node # script ini di-extend dari Node
+
+# ketika game baru dijalankan
+func _ready():
+    print("Game dimulai...")
+
+# ganti scene ke "name"
+func change_scene(name):
+    # begini perintah untuk ganti scene
+    get_tree().change_scene("res://Scenes/" + name + ".tscn")</code></pre>
+<p>Buatlah "Scripts/Scene1.gd" dan isi dengan kode ini:</p>
+<pre class="language-python line-numbers"><code># file: Scene1.gd
+
+extends Spatial # script ini di-extend dari Spatial
+
+var timer = 0.0 # inisialisasi variabel timer
+
+# ketika game baru dijalankan
+func _ready():
+    print("Scene1 dimulai...")
+
+# saat game berjalan. delta adalah selisih waktu
+func _process(delta):
+    timer += delta
+    if (timer &gt; 3.0):
+        GameManager.change_scene("Scene2") # ganti scene ke Scene2
+        timer = 0.0</code></pre>
+<p>Selanjutnya, buatlah script "Scripts/Scene2.gd" dan isi dengan kode ini:</p>
+<pre class="language-apacheconf line-numbers"><code># file: Scene2.gd
+
+extends Spatial # script ini di-extend dari Spatial
+
+# ketika game baru dijalankan
+func _ready():
+    print("Scene2 dimulai...") # print "Scene2 dimulai..."</code></pre>
+<p>Game Manager ini didaftarkan pada Project Settings &gt; Autoload sehingga bisa diakses dari script manapun.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/9/gambar1-2.png" alt="" width="895" height="718" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/9/responsive/gambar1-2-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/9/responsive/gambar1-2-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/9/responsive/gambar1-2-md.png 768w ,https://godot.rakifsul.my.id/media/posts/9/responsive/gambar1-2-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/9/responsive/gambar1-2-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/9/responsive/gambar1-2-2xl.png 1600w"></figure>
+<p>Karena sudah didaftarkan tadi, maka "GameManager.gd" tidak perlu di-attach lagi di manapun.</p>
+<p>Selanjutnya, buat Scene1 dan Scene2 dari Spatial dan save ke folder "Scenes".</p>
+<p>Adapun "Scene1.gd" di-attach ke Spatial bernama Scene1 dan "Scene2.gd" di-attach ke Spatial bernama Scene2.</p>
+<p>Selanjutnya, jadikan Spatial yang di-attach script "Scene1.gd" (Scene1) sebagai default Scene atau Scene yang pertama dijalankan.</p>
+<p>Jika Anda tidak tahu caranya, cari sendiri.</p>
+<p>Jika setup Anda sudah benar, maka saat project di-play, akan muncul teks di console:</p>
+<pre>Scene1 dimulai...</pre>
+<p>Kemudian:</p>
+<pre>Scene2 dimulai..."</pre>
+<h2>Pembahasan</h2>
+<p>"GameManager.gd" tugasnya menjadi API untuk mengganti scene dengan method change_scene:</p>
+<pre class="language-python line-numbers"><code># ganti scene ke "name"
+func change_scene(name):
+    # begini perintah untuk ganti scene
+    get_tree().change_scene("res://Scenes/" + name + ".tscn")</code></pre>
+<p>Walaupun begitu, bukan script tersebut yang memanggilnya.</p>
+<p>Yang memanggilnya adalah "Scene1.gd":</p>
+<pre class="language-python line-numbers"><code># saat game berjalan. delta adalah selisih waktu
+func _process(delta):
+    timer += delta
+    if (timer &gt; 3.0):
+        GameManager.change_scene("Scene2") # ganti scene ke Scene2
+        timer = 0.0</code></pre>
+<p>Oleh karena itulah, saya menginstruksikan untuk menjadikan Scene2 sebagai Scene default.</p>
+<p>Di Scene 1 ini, teks ini akan muncul di console:</p>
+<pre>Scene1 dimulai...</pre>
+<p>Perhatikan juga bahwa pada kode di atas GameManager memanggil method change_scene dengan parameter "Scene2".</p>
+<p>Artinya dia akan membuka Scene2 setelah 3 detik.</p>
+<p>Dan setelah Scene2 dibuka maka teks consolenya pun akan muncul:</p>
+<pre>Scene2 dimulai..."</pre>
+<h2>Penutup</h2>
+<p>Sekarang, seharusnya Anda sudah paham apa itu autoload dan cara menggunakannya.</p>
+<p>Selanjutnya, silakan terapkan pada latihan project Anda.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Belajar Godot Engine 3 - Mengenal Input Event</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-input-event.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-input-event.html</id>
+            <category term="Dasar Godot Engine 3"/>
+
+        <updated>2023-11-27T05:01:03+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Pada tutorial sebelumnya, input ditangani dengan metode polling. Artinya, di setiap frame cek status dari input, seperti key maupun mouse button. Di Godot Engine, ada cara lainnya, yakni dengan menggunakan event. Event itulah yang disebut input event. Pada tutorial ini, saya membahas penggunaan input&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Pada tutorial sebelumnya, input ditangani dengan metode polling.</p>
+<p>Artinya, di setiap frame cek status dari input, seperti key maupun mouse button.</p>
+<p>Di Godot Engine, ada cara lainnya, yakni dengan menggunakan event.</p>
+<p>Event itulah yang disebut input event.</p>
+<p>Pada tutorial ini, saya membahas penggunaan input event di Godot Engine 3.</p>
+<h2>Tujuan</h2>
+<p>Tujuan dari tutorial ini adalah:</p>
+<ul>
+<li>Pembaca memahami input event dan dapat menggunakannya di project Godot Engine 3.</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat tutorial ini adalah:</p>
+<ul>
+<li>Menggunakan Godot Engine 3</li>
+<li>Pernah melakukan coding sebelumnya</li>
+<li>Telah membaca dan mempraktekkan <a href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-keyboard-input.html">tutorial keyboard input ini</a>.</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Jika Anda telah mengikuti <a href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-keyboard-input.html">tutorial keyboard input</a>, maka Anda akan mendapati script "Spatial.gd" yang telah ter-attach ke Node Spatial.</p>
+<p>Gunakan kembali script tersebut.</p>
+<p>Buka dan replace isinya dengan kode ini:</p>
+<pre class="language-python line-numbers"><code># file: Spatial.gd
+
+# extend dari Spatial
+extends Spatial
+
+# saat ada signal input
+func _input(event):
+    # jika event berupa gerakan mouse
+    if event is InputEventMouseMotion:
+        # print posisi kursor relatif nya
+        print(event.relative)
+    # jika event berupa tombol
+    if event is InputEventMouseButton:
+        # apakah ini ditekan?
+        if(event.pressed):
+            # print tombol yang manakah
+            print(event.button_index)
+    # jika event berupa key dari keyboard
+    if event is InputEventKey:
+        # apakah ini ditekan?
+        if(event.pressed):
+            # apakah ini baru saja ditekan?
+            if(event.echo == false):
+                print(char(event.scancode) + " is just pressed")
+            # kalau bukan berarti sedang ditekan sambil ditahan
+            else:
+                print(char(event.scancode) + " is pressed")</code></pre>
+<p>Selanjutnya, jalankan scene tersebut dengan tombol play.</p>
+<p>Jika Anda menekan keyboard atau mouse button, atau menggerakkan mouse, maka akan tampil teks di console dari Godot Engine.</p>
+<h2>Pembahasan</h2>
+<p>Pertama, kita meng-extend script ini dari class Spatial:</p>
+<pre class="language-apacheconf line-numbers"><code># extend dari Spatial
+extends Spatial</code></pre>
+<p>Dengan cara itu, kita mendapat warisan method dari class Spatial.</p>
+<p>Selanjutnya, karena Spatial dapat menerima callback _input, maka kita akan tulis seperti ini:</p>
+<pre class="language-python line-numbers"><code># saat ada signal input
+func _input(event):
+    # jika event berupa gerakan mouse
+    if event is InputEventMouseMotion:
+        # print posisi kursor relatif nya
+        print(event.relative)
+    # jika event berupa tombol
+    if event is InputEventMouseButton:
+        # apakah ini ditekan?
+        if(event.pressed):
+            # print tombol yang manakah
+            print(event.button_index)
+    # jika event berupa key dari keyboard
+    if event is InputEventKey:
+        # apakah ini ditekan?
+        if(event.pressed):
+            # apakah ini baru saja ditekan?
+            if(event.echo == false):
+                print(char(event.scancode) + " is just pressed")
+            # kalau bukan berarti sedang ditekan sambil ditahan
+            else:
+                print(char(event.scancode) + " is pressed")</code></pre>
+<p>Perhatikan pada script di atas, kita menggunakan callback _input dan bukannya callback _process.</p>
+<p>Artinya event tersebut tidak terjadi setiap frame, melainkan jika ada input dari user.</p>
+<blockquote>
+<p>Catatan: Kenapa saya sebut callback?</p>
+<p>Itu karena biasanya, dalam game engine, kode game engine biasanya memanggil kode yang ada di dalam lingkungan scripting untuk keperluan yang umum.</p>
+<p>Misalnya saja, pemangilan fungsi yang dijalankan tiap frame seperti _process.</p>
+<p>Anda akan lebih paham tentang hal tersebut jika pernah membuat game engine.</p>
+<p>Karena pada dasarnya fungsi tersebut dipanggil, maka saya sebut callback saja.</p>
+</blockquote>
+<p>Karena parameternya hanya satu, yakni event saja, maka kita harus mengungkap event input apa yang terjadi. Caranya adalah dengan mempertanyakan:</p>
+<ul>
+<li>if event is InputEventMouseMotion: (apakah event adalah gerakan mouse)</li>
+<li>if event is InputEventMouseButton: (apakah event adalah tombol mouse)</li>
+<li>if event is InputEventKey: (apakah event adalah key dari keyboard)</li>
+</ul>
+<p>Untuk konsekuensi dari masing-masing if di atas, penjelasannya ada di komentar di bawah masing-masing if tadi.</p>
+<h2>Penutup</h2>
+<p>Sekarang, seharusnya Anda sudah paham tentang konsep input event.</p>
+<p>Selanjutnya, coba praktekkan hal yang sudah Anda pelajari tadi.</p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Belajar Godot Engine 3 - Mengenal Mouse Input</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-mouse-input.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-mouse-input.html</id>
+            <category term="Dasar Godot Engine 3"/>
+
+        <updated>2023-11-27T00:52:48+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Di tutorial ini, saya berasumsi bahwa Anda telah membaca tutorial keyboard input sebelumnya. Sebaiknya baca dulu karena di sana diajarkan dasarnya, dan saya malas untuk mengulang-ulangnya. Intinya, yang beda di sini hanyalah tombol apa yang dideteksi. Pada tutorial keyboard input, yang dideteksi adalah tombol&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Di tutorial ini, saya berasumsi bahwa Anda telah membaca <a href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-keyboard-input.html">tutorial keyboard input</a> sebelumnya.</p>
+<p>Sebaiknya baca dulu karena di sana diajarkan dasarnya, dan saya malas untuk mengulang-ulangnya.</p>
+<p>Intinya, yang beda di sini hanyalah tombol apa yang dideteksi.</p>
+<p>Pada tutorial keyboard input, yang dideteksi adalah tombol keyboard, sedangkan yang di sini adalah tombol mouse.</p>
+<p>Jika Anda belum tahu apa itu tombol mouse, itu adalah 3 tombol yang ada di kiri, tengah, dan kanan dari mouse.</p>
+<p>Khusus tombol tengah, biasanya kita menggunakannya untuk scroll.</p>
+<p>Tapi, sebenarnya tombol scroll tadi bisa ditekan. Silakan dicoba dulu.</p>
+<p>Jika Anda tidak menggunakan mouse karena menggunakan laptop, silakan pasang dulu mouse-nya karena saya tidak tahu apakah dengan trackpad script ini akan bekerja.</p>
+<h2>Tujuan</h2>
+<p>Tujuan tutorial ini adalah:</p>
+<ul>
+<li>Pembaca memahami mouse input dan dapat mendeteksinya dengan Godot Engine 3</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat tutorial ini adalah:</p>
+<ul>
+<li>Menggunakan Godot Engine 3</li>
+<li>Menggunakan mouse</li>
+<li>Pernah coding sebelumnya</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Jika Anda telah membaca <a href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-keyboard-input.html">tutorial keyboard input</a> sebelumnya, maka di sana ada Node Spatial yang sudah di-attach dengan script "Spatial.gd".</p>
+<p>Buka "Spatial.gd", kemudian replace kodenya dengan yang ini:</p>
+<pre class="language-python line-numbers"><code># file: Spatial.gd
+
+# extend dari Spatial
+extends Spatial
+
+# pada setiap frame. delta adalah selisih waktu.
+func _process(delta):
+    # apakah tombol kiri mouse ditekan
+    if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+        print("left mouse button pressed")
+    # apakah tombol kanan mouse ditekan
+    if(Input.is_mouse_button_pressed(BUTTON_RIGHT)):
+        print("right mouse button pressed")
+    # apakah tombol tengah mouse ditekan
+    if(Input.is_mouse_button_pressed(BUTTON_MIDDLE)):
+        print("middle mouse button pressed")
+    # apakah action "test_mouse_action" yang disetting di project setting ditekan
+    if(Input.is_action_pressed("test_mouse_action")):
+        print("test_mouse_action pressed")</code></pre>
+<p>Selanjutnya, buka Project Settings &gt; Input Map dan isi entry untuk "test_mouse_action".</p>
+<p>Kemudian, jalankan scene dan coba klik tombol dan action tadi.</p>
+<p>Nanti akan muncul teks di console sesuai dengan apa yang anda klik di mouse.</p>
+<h2>Pembahasan</h2>
+<p>Yang perlu Anda kenali di tutorial ini adalah:</p>
+<pre class="language-python line-numbers"><code>    # apakah tombol kiri mouse ditekan
+    if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+        print("left mouse button pressed")</code></pre>
+<p>Method is_mouse... yang diikuti parameter id dari tombol mouse, dalam hal ini BUTTON_LEFT.</p>
+<p>Jika pada keyboard yang dipanggil adalah is_key... maka pada mouse adalah is_mouse...</p>
+<p>Untuk yang ini:</p>
+<pre class="language-python line-numbers"><code>    # apakah action "test_mouse_action" yang disetting di project setting ditekan
+    if(Input.is_action_pressed("test_mouse_action")):
+        print("test_mouse_action pressed")</code></pre>
+<p>Interface-nya masih sama, yakni is_action_pressed karena di Input Map kita juga bisa mendaftarkan mouse button.</p>
+<h2>Penutup</h2>
+<p>Sekarang, seharusnya Anda telah mengenal mouse input.</p>
+<p>Selanjutnya, silakan praktekkan apa yang telah Anda pelajari dalam tutorial ini.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Belajar Godot Engine 3 - Mengenal Keyboard Input</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-keyboard-input.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-keyboard-input.html</id>
+            <category term="Dasar Godot Engine 3"/>
+
+        <updated>2023-11-27T00:35:47+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Godot Engine 3 bisa mendeteksi status dari keyboard. Apakah itu ditekan, di-release, dan sebagainya. Hal tersebut diperlukan karena pada game yang dikendalikan keyboard, game tersebut harus mengetahui status dari key agar karakter di dalam game bisa dikendalikan dengan benar. Sebagai contoh. Pada game first&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Godot Engine 3 bisa mendeteksi status dari keyboard.</p>
+<p>Apakah itu ditekan, di-release, dan sebagainya.</p>
+<p>Hal tersebut diperlukan karena pada game yang dikendalikan keyboard, game tersebut harus mengetahui status dari key agar karakter di dalam game bisa dikendalikan dengan benar.</p>
+<p>Sebagai contoh.</p>
+<p>Pada game first person shooter, tombol w, misalnya, harus bisa terdeteksi oleh game agar game tahu kapan karakternya harus bergerak maju.</p>
+<p>Begitu pula pada tombol lainnya.</p>
+<p>Pendeteksian status key dari keyboard bisa dilakukan dengan menggunakan class Input dari Godot Engine.</p>
+<p>Bagaimana cara kerjanya? Mari dipelajari.</p>
+<h2>Tujuan</h2>
+<p>Tujuan dari tutorial ini adalah:</p>
+<ul>
+<li>Pembaca memahami apa itu keyboard input dan dapat menerapkannya pada project pembaca sendiri.</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat dari tutorial ini adalah:</p>
+<ul>
+<li>Menggunakan Godot Engine 3.</li>
+<li>Telah mengenal Godot Engine 3 sebelumnya.</li>
+<li>Memiliki pengalaman coding sebelumnya.</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Jika Anda telah membaca tutorial <a href="https://godot.rakifsul.my.id/belajar-godot-engine-3-cara-membuat-project.html">cara membuat project Godot Engine 3</a> dan mempraktekkannya, maka kemungkinan akan ada Node Spatial di sana.</p>
+<p>Gunakan Node tersebut. Attach sebuah script bernama "Spatial.gd".</p>
+<p>Selanjutnya, isi "Spatial.gd" dengan kode ini:</p>
+<pre class="language-python line-numbers"><code># file: Spatial.gd
+
+# extend dari Spatial
+extends Spatial
+
+# pada tiap frame. delta adalah selisih waktu
+func _process(delta):
+    # apakah tombol w ditekan
+    if(Input.is_key_pressed(KEY_W)):
+        print("w is pressed")
+    # apakah tombol s ditekan
+    if(Input.is_key_pressed(KEY_S)):
+        print("s is pressed")
+    # apakah action jump, yand disetting di project setting ditekan
+    if(Input.is_action_pressed("jump")):
+        print("jump is pressed")
+    # apakah action run, yand disetting di project setting ditekan
+    if(Input.is_action_pressed("run")):
+        print("run is pressed")
+    # apakah action jump, yand disetting di project setting baru saja ditekan
+    if(Input.is_action_just_pressed("jump")):
+        print("jump just pressed")
+    # apakah action jump, yand disetting di project setting baru saja dilepas
+    if(Input.is_action_just_released("jump")):
+        print("jump just released")
+    # apakah action jump dan run, yand disetting di project setting ditekan
+    if(Input.is_action_pressed("jump")):
+        if(Input.is_action_pressed("run")):
+            print("jump while running")</code></pre>
+<p>Karena kita perlu input action juga, maka bukalah Project Settings &gt; Input Map, kemudian isi untuk "run" dan "jump". </p>
+<p>Key untuk kedua action tadi bebas. Boleh key yang manapun.</p>
+<p>Kemudian, jalankan scene dan perhatikan console-nya.</p>
+<p>Nanti akan ada teks yang isinya tergantung dari keyboard yang ditekan.</p>
+<h2>Pembahasan</h2>
+<p>Pertama, bagian ini memiliki arti bahwa kita membuat class yang di-extend dari Spatial:</p>
+<pre class="language-python line-numbers"><code># extend dari Spatial
+extends Spatial</code></pre>
+<p>Hal itu bisa dipahami karena Node yang di-attach oleh script itu adalah Spatial juga.</p>
+<p>Selanjutnya, pada bagian ini, kita menangkap event process yang parameternya adalah delta time atau selisih waktu tiap frame:</p>
+<pre class="language-python line-numbers"><code># pada tiap frame. delta adalah selisih waktu
+func _process(delta):</code></pre>
+<p>Karena kita menggunakan metoda polling, maka tiap frame dicek apa state dari key keyboard kita. Cirinya adalah penggunaan method yang berawalan is di dalam conditional if:</p>
+<pre class="language-python line-numbers"><code>    # apakah tombol w ditekan
+    if(Input.is_key_pressed(KEY_W)):
+        print("w is pressed")
+    # apakah tombol s ditekan
+    if(Input.is_key_pressed(KEY_S)):
+        print("s is pressed")
+    # apakah action jump, yand disetting di project setting ditekan
+    if(Input.is_action_pressed("jump")):
+        print("jump is pressed")
+    # apakah action run, yand disetting di project setting ditekan
+    if(Input.is_action_pressed("run")):
+        print("run is pressed")
+    # apakah action jump, yand disetting di project setting baru saja ditekan
+    if(Input.is_action_just_pressed("jump")):
+        print("jump just pressed")
+    # apakah action jump, yand disetting di project setting baru saja dilepas
+    if(Input.is_action_just_released("jump")):
+        print("jump just released")
+    # apakah action jump dan run, yand disetting di project setting ditekan
+    if(Input.is_action_pressed("jump")):
+        if(Input.is_action_pressed("run")):
+            print("jump while running")</code></pre>
+<p>Adapun perbedaan antara is_key... dengan is_action... terletak pada input dari methodnya.</p>
+<p>Pada is_key... parameternya berupa enum dari id key milik keyboard, sedangkan pada is_action... parameternya berupa apa yang tadi Anda tulis di Input Map di Project Settings.</p>
+<p>Kecuali Anda hanya membuat aplikasi sederhana, adalah bijak untuk senantiasa menggunakan is_action... yang harus didaftarkan di Input Map.</p>
+<p>Itu karena jika ada perubahan pada key yang ingin kita deteksi, kita tidak perlu mengubah kodenya lagi.</p>
+<h2>Penutup</h2>
+<p>Sekarang, Anda seharusnya telah mengenal keyboard input di Godot Engine.</p>
+<p>Selanjutnya, silakan praktekkan sendiri apa yang telah dipelajari di sini.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Belajar Godot Engine 4 - Cara Membuat Project</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-4-cara-membuat-project.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-4-cara-membuat-project.html</id>
+            <category term="Dasar Godot Engine 4"/>
+
+        <updated>2023-11-24T20:26:25+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Membuat game dari nol dan hanya dengan coding saja adalah hal yang relatif sulit. Agar pembuatan game menjadi lebih mudah, manusia menciptakan sebuah tool yang bernama game engine. Game engine ada banyak jenisnya. Ada Panda 3D, Unreal Engine, Unity, dan lain-lain. Dilihat dari lisensinya,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Membuat game dari nol dan hanya dengan coding saja adalah hal yang relatif sulit.</p>
+<p>Agar pembuatan game menjadi lebih mudah, manusia menciptakan sebuah tool yang bernama game engine.</p>
+<p>Game engine ada banyak jenisnya.</p>
+<p>Ada Panda 3D, Unreal Engine, Unity, dan lain-lain.</p>
+<p>Dilihat dari lisensinya, game engine ada yang bersifat proprietary dan open source.</p>
+<p>Salah satu game engine open source yang cukup terkenal adalah Godot Engine.</p>
+<p>Godot Engine adalah game engine open source yang bisa digunakan secara gratis.</p>
+<p>Mindset yang ada pada game engine ini adalah bahwa semua yang tampil di dalam game adalah scene.</p>
+<p>Jadi, karakter, obstacle, GUI, ground, wall, trigger dan lain-lain dianggap sebagai scene.</p>
+<p>Berbeda dengan Unity yang menganggapnya sebagai Game Object yang ditempeli Component.</p>
+<p>Namun, saya sendiri seringkali mengategorikan scene-scene tadi sebagai scene dan prefab, walaupun pada hakikatnya itu semua adalah scene. Tapi itu untuk memudahkan pengelompokannya saja.</p>
+<p>Saat ini Godot Engine sudah mencapai versi 4, tapi yang LTS adalah versi 3.</p>
+<p>Oleh karena itu, tidak ada salahnya jika saya membahasnya di blog ini.</p>
+<p>Sekarang, sebelum melangkah lebih lanjut, mari kita pelajari cara membuat project di Godot Engine 4 ini.</p>
+<h2>Tujuan</h2>
+<p>Tujuan dari tutorial ini adalah:</p>
+<ul>
+<li>Pembaca mampu membuat project baru di Godot Engine 4.</li>
+<li>Pembaca mampu mencoba project yang sudah dibuatnya tadi.</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat dari tutorial ini adalah:</p>
+<ul>
+<li>Menggunakan sistem operasi Windows 10 ke atas.</li>
+<li>Menggunakan komputer yang bisa menjalankan Godot Engine 4 dengan normal.</li>
+<li>Telah men-download Godot Engine 4 dan mengekstraknya.</li>
+<li>Mampu menjalankan executable dari Godot Engine 4 yang telah diekstrak.</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Pertama-tama, jalankan executable dari Godot Engine 3 yang telah di-download dan diekstrak ke komputer Anda.</p>
+<p>Setelah executable berjalan, Anda akan melihat tampilan ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_anMRmp85Mu.png" alt="langkah 1" width="1024" height="603" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_anMRmp85Mu-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_anMRmp85Mu-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_anMRmp85Mu-md.png 768w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_anMRmp85Mu-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_anMRmp85Mu-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_anMRmp85Mu-2xl.png 1600w"></figure>
+<p>Klik "New Project", nanti tampilannya akan seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_TNUTHP7h6j.png" alt="langkah 2" width="642" height="462" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_TNUTHP7h6j-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_TNUTHP7h6j-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_TNUTHP7h6j-md.png 768w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_TNUTHP7h6j-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_TNUTHP7h6j-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_TNUTHP7h6j-2xl.png 1600w"></figure>
+<p>Beri nama project di "Project Name" kemudian klik "Create Folder".</p>
+<p>Selanjutnya, klik "Create &amp; Edit".</p>
+<p>Nanti, akan muncul tampilan seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_BJTzPc5aOC.png" alt="langkah 3" width="1024" height="550" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_BJTzPc5aOC-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_BJTzPc5aOC-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_BJTzPc5aOC-md.png 768w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_BJTzPc5aOC-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_BJTzPc5aOC-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_BJTzPc5aOC-2xl.png 1600w"></figure>
+<p>Buat 3D Scene dengan melakukan klik pada tombol "3D Scene".</p>
+<p>Selanjutnya save scene tadi dengan menu "Scene" &gt; "Save Scene", pilih lokasinya sesuka Anda.</p>
+<p>Sekarang, klik tombol play di pojok kanan atas.</p>
+<p>Nanti akan muncul tampilan seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_5mC9Q8wjf0.png" alt="langkah 4" width="516" height="132" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_5mC9Q8wjf0-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_5mC9Q8wjf0-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_5mC9Q8wjf0-md.png 768w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_5mC9Q8wjf0-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_5mC9Q8wjf0-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_5mC9Q8wjf0-2xl.png 1600w"></figure>
+<p>Klik "Select", lalu ambil file scene yang tadi Anda save.</p>
+<p>Nanti akan muncul ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/5/Godot_v4.1.2-stable_win64_DN936Ga5FJ.png" alt="selesai" width="1154" height="680" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_DN936Ga5FJ-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_DN936Ga5FJ-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_DN936Ga5FJ-md.png 768w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_DN936Ga5FJ-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_DN936Ga5FJ-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/5/responsive/Godot_v4.1.2-stable_win64_DN936Ga5FJ-2xl.png 1600w"></figure>
+<p>Selesai.</p>
+<h2>Penutup</h2>
+<p>Sekarang, Anda telah dijelaskan cara membuat project baru di Godot Engine 4 dan cara mencobanya.</p>
+<p>Selanjutnya, silakan Anda coba tutup aplikasi Godot Engine-nya, kemudian buka kembali project yang telah Anda buat tadi.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Belajar Godot Engine 3 - Cara Membuat Project</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-3-cara-membuat-project.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-3-cara-membuat-project.html</id>
+            <category term="Dasar Godot Engine 3"/>
+
+        <updated>2023-11-24T20:26:31+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Membuat game dari nol dan hanya dengan coding saja adalah hal yang relatif sulit. Agar pembuatan game menjadi lebih mudah, manusia menciptakan sebuah tool yang bernama game engine. Game engine ada banyak jenisnya. Ada Panda 3D, Unreal Engine, Unity, dan lain-lain. Dilihat dari lisensinya,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Membuat game dari nol dan hanya dengan coding saja adalah hal yang relatif sulit.</p>
+<p>Agar pembuatan game menjadi lebih mudah, manusia menciptakan sebuah tool yang bernama game engine.</p>
+<p>Game engine ada banyak jenisnya.</p>
+<p>Ada Panda 3D, Unreal Engine, Unity, dan lain-lain.</p>
+<p>Dilihat dari lisensinya, game engine ada yang bersifat proprietary dan open source.</p>
+<p>Salah satu game engine open source yang cukup terkenal adalah Godot Engine.</p>
+<p>Godot Engine adalah game engine open source yang bisa digunakan secara gratis.</p>
+<p>Mindset yang ada pada game engine ini adalah bahwa semua yang tampil di dalam game adalah scene.</p>
+<p>Jadi, karakter, obstacle, GUI, ground, wall, trigger dan lain-lain dianggap sebagai scene.</p>
+<p>Berbeda dengan Unity yang menganggapnya sebagai Game Object yang ditempeli Component.</p>
+<p>Namun, saya sendiri seringkali mengategorikan scene-scene tadi sebagai scene dan prefab, walaupun pada hakikatnya itu semua adalah scene. Tapi itu untuk memudahkan pengelompokannya saja.</p>
+<p>Saat ini Godot Engine sudah mencapai versi 4, tapi yang LTS adalah versi 3.</p>
+<p>Oleh karena itu, tidak ada salahnya jika saya membahasnya di blog ini.</p>
+<p>Sekarang, sebelum melangkah lebih lanjut, mari kita pelajari cara membuat project di Godot Engine 3 ini.</p>
+<h2>Tujuan</h2>
+<p>Tujuan dari tutorial ini adalah:</p>
+<ul>
+<li>Memahami dan mampu mempraktekan cara membuat project Godot Engine 3.</li>
+<li>Mampu mencoba menjalankan atau mencoba scene setelah project itu dibuat.</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat dari tutorial ini adalah:</p>
+<ul>
+<li>Menggunakan sistem operasi Windows 10 ke atas.</li>
+<li>Menggunakan komputer yang bisa menjalankan Godot Engine 3 dengan normal.</li>
+<li>Telah men-download Godot Engine 3 dan mengekstraknya.</li>
+<li>Mampu menjalankan executable dari Godot Engine 3 yang telah diekstrak.</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Pertama-tama, jalankan executable dari Godot Engine 3 yang telah di-download dan diekstrak ke komputer Anda.</p>
+<p>Setelah executable berjalan, Anda akan melihat tampilan ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/2/langkah-1-1024x631.png" alt="langkah 1" width="1024" height="631" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-1-1024x631-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-1-1024x631-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-1-1024x631-md.png 768w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-1-1024x631-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-1-1024x631-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-1-1024x631-2xl.png 1600w"></figure>
+<p>Untuk membuat project baru, klik "New Project".</p>
+<p>Nanti tampilannya akan menjadi seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/2/langkah-2-1024x631.png" alt="langkah 2" width="1024" height="631" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-2-1024x631-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-2-1024x631-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-2-1024x631-md.png 768w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-2-1024x631-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-2-1024x631-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-2-1024x631-2xl.png 1600w"></figure>
+<p>Selanjutnya, beri nama project di "Project Name" dan "Browse" untuk memilih tempat menyimpan projectnya.</p>
+<p>Selanjutnya, klik "Create &amp; Edit".</p>
+<p>Nanti tampilannya akan berubah menjadi seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/2/langkah-3-1024x555.png" alt="langkah 3" width="1024" height="555" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-3-1024x555-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-3-1024x555-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-3-1024x555-md.png 768w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-3-1024x555-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-3-1024x555-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/2/responsive/langkah-3-1024x555-2xl.png 1600w"></figure>
+<p>Sekarang klik tombol "3D Scene", kemudian buka menu "Scene" &gt; "Save Scene" dan save di manapun.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/2/Godot_v3.5.2-stable_win64_bMgL8SH6vS.png" alt="langkah 4" width="1024" height="576" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_bMgL8SH6vS-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_bMgL8SH6vS-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_bMgL8SH6vS-md.png 768w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_bMgL8SH6vS-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_bMgL8SH6vS-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_bMgL8SH6vS-2xl.png 1600w"></figure>
+<p>Sekarang, tekan tombol play di pojok kanan atas.</p>
+<p>Nanti akan tampil prompt seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/2/Godot_v3.5.2-stable_win64_PmMPj3jpwB.png" alt="langkah 5" width="1024" height="576" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_PmMPj3jpwB-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_PmMPj3jpwB-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_PmMPj3jpwB-md.png 768w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_PmMPj3jpwB-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_PmMPj3jpwB-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_PmMPj3jpwB-2xl.png 1600w"></figure>
+<p>Klik "Select" kemudian ambil scene yang barusan di-save.</p>
+<p>Nanti akan muncul game window seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/2/Godot_v3.5.2-stable_win64_NJFkTN13r5.png" alt="selesai" width="1026" height="632" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_NJFkTN13r5-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_NJFkTN13r5-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_NJFkTN13r5-md.png 768w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_NJFkTN13r5-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_NJFkTN13r5-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/2/responsive/Godot_v3.5.2-stable_win64_NJFkTN13r5-2xl.png 1600w"></figure>
+<p>Selesai.</p>
+<h2>Penutup</h2>
+<p>Sekarang, Anda telah berhasil membuat project Godot Engine 3 dan mencobanya.</p>
+<p>Ada baiknya jika Anda coba sendiri cara membuka project yang telah Anda buat tadi.</p>
+            ]]>
+        </content>
+    </entry>
+</feed>
