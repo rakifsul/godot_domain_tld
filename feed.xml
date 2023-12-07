@@ -3,22 +3,22 @@
     <title>RAKIFSUL GODOT</title>
     <link href="https://godot.rakifsul.my.id/feed.xml" rel="self" />
     <link href="https://godot.rakifsul.my.id" />
-    <updated>2023-11-29T05:04:34+07:00</updated>
+    <updated>2023-12-08T01:37:42+07:00</updated>
     <author>
         <name>RAKIFSUL</name>
     </author>
     <id>https://godot.rakifsul.my.id</id>
 
     <entry>
-        <title>Studi Kasus Godot Engine 3 - Nav Mesh Agent Sederhana</title>
+        <title>Contoh Project Godot Engine 3 - Nav Mesh Agent Sederhana</title>
         <author>
             <name>RAKIFSUL</name>
         </author>
-        <link href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-nav-mesh-agent-sederhana.html"/>
-        <id>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-nav-mesh-agent-sederhana.html</id>
+        <link href="https://godot.rakifsul.my.id/contoh-project-godot-engine-3-nav-mesh-agent-sederhana.html"/>
+        <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-nav-mesh-agent-sederhana.html</id>
             <category term="Premium"/>
 
-        <updated>2023-11-29T05:04:34+07:00</updated>
+        <updated>2023-12-08T01:34:23+07:00</updated>
             <summary>
                 <![CDATA[
                     Godot Engine 3 adalah game engine yang cukup lengkap fiturnya. Salah satu kelengkapannya dibuktikan dengan adanya fitur pathfinding. Fitur pathfinding tersebut diwujudkan dengan penggunaan Navigation Mesh atau NavMesh. Sayangnya, fitur tersebut belum dilengkapi dengan agent-nya. Jadi, belum ada NavMeshAgent di Godot Engine versi 3.4, setahu&hellip;
@@ -46,22 +46,22 @@
 <p>Disclaimer:</p>
 <ul>
 <li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Saya tidak menjamin bahwa Anda akan paham dengan isi studi kasus ini.</li>
+<li>Source code tidak dijamin bisa berjalan dengan benar.</li>
 </ul>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
             ]]>
         </content>
     </entry>
     <entry>
-        <title>Studi Kasus Godot Engine 3 - Predictive Turret Aim</title>
+        <title>Contoh Project Godot Engine 3 - Predictive Turret Aim</title>
         <author>
             <name>RAKIFSUL</name>
         </author>
-        <link href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-predictive-turret-aim.html"/>
-        <id>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-predictive-turret-aim.html</id>
+        <link href="https://godot.rakifsul.my.id/contoh-project-godot-engine-3-predictive-turret-aim.html"/>
+        <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-predictive-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-11-29T05:00:30+07:00</updated>
+        <updated>2023-12-08T01:36:04+07:00</updated>
             <summary>
                 <![CDATA[
                     Jika Anda telah membaca postingan ini, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim. Di postingan tersebut, dijelaskan bahwa turret adalah meriam statis. Adapun meriam statis tersebut memiliki ujung berlubang tempat keluarnya peluru yang disebut muzzle. Di studi kasus ini, kita&hellip;
@@ -69,7 +69,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Jika Anda telah membaca <a href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-simple-turret-aim.html">postingan ini</a>, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim.</p>
+                <p>Jika Anda telah membaca <a href="https://godot.rakifsul.my.id/contoh-project-godot-engine-3-simple-turret-aim.html">postingan ini</a>, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim.</p>
 <p>Di postingan tersebut, dijelaskan bahwa turret adalah meriam statis.</p>
 <p>Adapun meriam statis tersebut memiliki ujung berlubang tempat keluarnya peluru yang disebut muzzle.</p>
 <p>Di studi kasus ini, kita juga menggunakan meriam statis.</p>
@@ -81,26 +81,26 @@
 <p>Adapun kalkulasi pada sistem turret ini lebih kompleks.</p>
 <p>Diharapkan setidaknya Anda telah mengenal gerak parabola di ilmu fisika.</p>
 <p>Itu karena kita akan mencari v0 dari gerak parabola tersebut.</p>
-<p>Bagaimana caranya? Beli studi kasus ini.</p>
+<p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
 <p>Disclaimer:</p>
 <ul>
 <li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Saya tidak menjamin bahwa Anda akan paham dengan isi studi kasus ini.</li>
+<li>Source code tidak dijamin bisa berjalan dengan benar.</li>
 </ul>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
             ]]>
         </content>
     </entry>
     <entry>
-        <title>Studi Kasus Godot Engine 3 - Simple Turret Aim</title>
+        <title>Contoh Project Godot Engine 3 - Simple Turret Aim</title>
         <author>
             <name>RAKIFSUL</name>
         </author>
-        <link href="https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-simple-turret-aim.html"/>
-        <id>https://godot.rakifsul.my.id/studi-kasus-godot-engine-3-simple-turret-aim.html</id>
+        <link href="https://godot.rakifsul.my.id/contoh-project-godot-engine-3-simple-turret-aim.html"/>
+        <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-simple-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-11-29T04:50:45+07:00</updated>
+        <updated>2023-12-08T01:37:42+07:00</updated>
             <summary>
                 <![CDATA[
                     Di dalam game yang ada fitur tembak menembaknya, tidak jarang digunakan turret. Turret adalah sejenis meriam yang posisinya biasanya statis, setidaknya itu definisi saya. Pada ujung turret ada sebuah bagian berlubang tempat keluarnya peluru yang disebut muzzle. Jadi, Anda bisa ambil mudahnya bahwa turret bisa&hellip;
@@ -121,14 +121,14 @@
 <p>Pada studi kasus ini, dibahas cara membidik turret agar muzzle-nya mengarah ke titik yang ditunjukkan kursor mouse pada ruang 3D dari world.</p>
 <p>Walaupun muzzle mengarah ke target tersebut, kita tidak bisa memastikan bahwa peluru akan persis berbentur ke sana, karena pelurunya berupa rigidbody yang terpengaruhi gravitasi.</p>
 <p>Karena itu juga sistem ini disebut sederhana.</p>
-<p>Memang ada studi kasus saya yang lainnya, yakni predictive turret aim.</p>
+<p>Memang ada contoh project saya yang lainnya, yakni predictive turret aim.</p>
 <p>Tapi itu berbeda dengan yang ini, karena yang predictive tadi benar-benar merencanakan jatuhnya peluru pada titik yang ditunjuk kursor mouse.</p>
 <p>Kalkulasi dalam simple turret aim ini lebih sederhana daripada yang predictive.</p>
-<p>Bagaimana cara melakukannya? Belilah konten studi kasus ini.</p>
+<p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
 <p>Disclaimer:</p>
 <ul>
 <li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Saya tidak menjamin bahwa Anda akan paham dengan isi studi kasus ini.</li>
+<li>Source code tidak dijamin akan berjalan dengan benar.</li>
 </ul>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
             ]]>
