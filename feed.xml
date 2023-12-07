@@ -3,7 +3,7 @@
     <title>RAKIFSUL GODOT</title>
     <link href="https://godot.rakifsul.my.id/feed.xml" rel="self" />
     <link href="https://godot.rakifsul.my.id" />
-    <updated>2023-12-08T01:37:42+07:00</updated>
+    <updated>2023-12-08T04:17:04+07:00</updated>
     <author>
         <name>RAKIFSUL</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-nav-mesh-agent-sederhana.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-08T01:34:23+07:00</updated>
+        <updated>2023-12-08T04:15:28+07:00</updated>
             <summary>
                 <![CDATA[
                     Godot Engine 3 adalah game engine yang cukup lengkap fiturnya. Salah satu kelengkapannya dibuktikan dengan adanya fitur pathfinding. Fitur pathfinding tersebut diwujudkan dengan penggunaan Navigation Mesh atau NavMesh. Sayangnya, fitur tersebut belum dilengkapi dengan agent-nya. Jadi, belum ada NavMeshAgent di Godot Engine versi 3.4, setahu&hellip;
@@ -46,9 +46,9 @@
 <p>Disclaimer:</p>
 <ul>
 <li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Source code tidak dijamin bisa berjalan dengan benar.</li>
+<li>Source code hanya teruji di Godot Engine 3.5.2 dan tidak dijamin bisa berjalan dengan benar.</li>
 </ul>
-<p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
+<p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-nav-mesh-agent-sederhana" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
             ]]>
         </content>
     </entry>
@@ -61,7 +61,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-predictive-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-08T01:36:04+07:00</updated>
+        <updated>2023-12-08T04:16:18+07:00</updated>
             <summary>
                 <![CDATA[
                     Jika Anda telah membaca postingan ini, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim. Di postingan tersebut, dijelaskan bahwa turret adalah meriam statis. Adapun meriam statis tersebut memiliki ujung berlubang tempat keluarnya peluru yang disebut muzzle. Di studi kasus ini, kita&hellip;
@@ -85,9 +85,9 @@
 <p>Disclaimer:</p>
 <ul>
 <li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Source code tidak dijamin bisa berjalan dengan benar.</li>
+<li>Source code hanya teruji di Godot Engine 3.5.2 dan tidak dijamin bisa berjalan dengan benar.</li>
 </ul>
-<p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
+<p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-predictive-turret-aim" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
             ]]>
         </content>
     </entry>
@@ -100,7 +100,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-simple-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-08T01:37:42+07:00</updated>
+        <updated>2023-12-08T04:17:04+07:00</updated>
             <summary>
                 <![CDATA[
                     Di dalam game yang ada fitur tembak menembaknya, tidak jarang digunakan turret. Turret adalah sejenis meriam yang posisinya biasanya statis, setidaknya itu definisi saya. Pada ujung turret ada sebuah bagian berlubang tempat keluarnya peluru yang disebut muzzle. Jadi, Anda bisa ambil mudahnya bahwa turret bisa&hellip;
@@ -128,9 +128,9 @@
 <p>Disclaimer:</p>
 <ul>
 <li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Source code tidak dijamin akan berjalan dengan benar.</li>
+<li>Source code hanya teruji di Godot Engine 3.5.2 dan tidak dijamin bisa berjalan dengan benar.</li>
 </ul>
-<p class="align-center"><a class="btn coba" style="width: 100%;" href="javascript:void(0);" rel="nofollow noopener noreferrer">belum tersedia</a></p>
+<p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-simple-turret-aim" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
             ]]>
         </content>
     </entry>
