@@ -3,12 +3,112 @@
     <title>RAKIFSUL GODOT</title>
     <link href="https://godot.rakifsul.my.id/feed.xml" rel="self" />
     <link href="https://godot.rakifsul.my.id" />
-    <updated>2023-12-08T04:17:04+07:00</updated>
+    <updated>2023-12-10T21:03:11+07:00</updated>
     <author>
         <name>RAKIFSUL</name>
     </author>
     <id>https://godot.rakifsul.my.id</id>
 
+    <entry>
+        <title>Belajar Godot Engine 3 - Mengenal Static Body</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-static-body.html"/>
+        <id>https://godot.rakifsul.my.id/belajar-godot-engine-3-mengenal-static-body.html</id>
+            <category term="Dasar Godot Engine 3"/>
+
+        <updated>2023-12-10T21:03:11+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Pendahuluan Static Body adalah sebuah Node di Godot Engine 3 yang berguna sebagai penghalang. Static Body tidak seperti Rigid Body yang dipengaruhi gaya. Static Body, sesuai namanya, tetap statis jika berbenturan dengan objek lain. Karena statis, Static Body cocok digunakan sebagai ground atau wall. Dalam&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Pendahuluan</h2>
+<p>Static Body adalah sebuah Node di Godot Engine 3 yang berguna sebagai penghalang.</p>
+<p>Static Body tidak seperti Rigid Body yang dipengaruhi gaya.</p>
+<p>Static Body, sesuai namanya, tetap statis jika berbenturan dengan objek lain.</p>
+<p>Karena statis, Static Body cocok digunakan sebagai ground atau wall.</p>
+<p>Dalam menjelaskan perilaku static body, diperlukan Rigid Body sebagai penyertanya yang akan dibahas ke depan.</p>
+<h2>Tujuan</h2>
+<p>Tujuan dari tutorial ini adalah:</p>
+<ul>
+<li>Pembaca mengenal Static Body dan dapat menggunakannya dalam project Godot Engine 3.</li>
+</ul>
+<h2>Prasyarat</h2>
+<p>Prasyarat dari tutorial ini adalah:</p>
+<ul>
+<li>Menggunakan Godot Engine 3</li>
+<li>Pernah coding sebelumnya</li>
+<li>Mengetahui dasar-dasar Godot Engine 3 untuk 3D.</li>
+</ul>
+<h2>Langkah-Langkah</h2>
+<p>Pertama, buatlah project baru.</p>
+<p>Caranya telah dibahas <a href="https://godot.rakifsul.my.id/belajar-godot-engine-3-cara-membuat-project.html">di sini</a>.</p>
+<p>Selanjutnya, buat scene baru bernama "Spatial.tscn" dengan root Spatial Node.</p>
+<p>Save, kemudian tambahkan sebuah Mesh Instance Node di bawah Spatial Node tadi.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_HDFDCdyRm1.png" alt="" width="244" height="156" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_HDFDCdyRm1-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_HDFDCdyRm1-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_HDFDCdyRm1-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_HDFDCdyRm1-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_HDFDCdyRm1-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_HDFDCdyRm1-2xl.png 1600w"></figure>
+<p>Dari property Mesh Instance di sebelah kanan, buat instance-nya berupa Cube.</p>
+<p>Selanjutnya, kita akan mengkonversi Mesh Instance menjadi Tri Mesh Static Body.</p>
+<p>Atau yang bisa disebut juga Static Body dengan Collision Shape berupa triangle mesh.</p>
+<p>Caranya, sorot Mesh Instance, kemudian di toolbar "Mesh" klik dan pilih "Create Trimesh Static Body".</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_gPwY7Yptqz.png" alt="" width="1920" height="1080" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_gPwY7Yptqz-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_gPwY7Yptqz-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_gPwY7Yptqz-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_gPwY7Yptqz-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_gPwY7Yptqz-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_gPwY7Yptqz-2xl.png 1600w"></figure>
+<p>Kemudian transform Mesh Instance menjadi:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_j9rTzwLYPE.png" alt="" width="271" height="186" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_j9rTzwLYPE-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_j9rTzwLYPE-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_j9rTzwLYPE-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_j9rTzwLYPE-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_j9rTzwLYPE-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_j9rTzwLYPE-2xl.png 1600w"></figure>
+<p>Hasilnya di cabangnya akan seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_CcZuF1P25T-2.png" alt="" width="247" height="199" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_CcZuF1P25T-2-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_CcZuF1P25T-2-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_CcZuF1P25T-2-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_CcZuF1P25T-2-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_CcZuF1P25T-2-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_CcZuF1P25T-2-2xl.png 1600w"></figure>
+<p>Selanjutnya, kita akan membuat objek Rigid Body-nya.</p>
+<p>Caranya sorot "Spatial", kemudian tambahkan Node Rigid Body.</p>
+<p>Buat strukturnya seperti ini:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_vBQXko6Rpm.png" alt="" width="241" height="95" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_vBQXko6Rpm-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_vBQXko6Rpm-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_vBQXko6Rpm-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_vBQXko6Rpm-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_vBQXko6Rpm-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_vBQXko6Rpm-2xl.png 1600w"></figure>
+<p>Collision Shape nya berupa Box:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_TFmlWYkEsP.png" alt="" width="278" height="96" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_TFmlWYkEsP-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_TFmlWYkEsP-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_TFmlWYkEsP-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_TFmlWYkEsP-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_TFmlWYkEsP-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_TFmlWYkEsP-2xl.png 1600w"></figure>
+<p>Mesh Instance-nya berupa Cube:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_IuUTUMPPBg.png" alt="" width="284" height="153" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_IuUTUMPPBg-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_IuUTUMPPBg-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_IuUTUMPPBg-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_IuUTUMPPBg-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_IuUTUMPPBg-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_IuUTUMPPBg-2xl.png 1600w"></figure>
+<p>Kemudian, transform Rigid Body tersebut sedikit ke atas lantainya, agar jika jatuh bisa terlihat jelas.</p>
+<p>Selanjutnya, buat Camera di bawah Spatial.</p>
+<p>Selanjutnya, navigasi 3D editor agar seluruh objek terlihat jelas.</p>
+<p>Sorot Camera, kemudian di toolbar "Perspective" pilih "Align Transform with View".</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/16/Godot_v3.5.2-stable_win64_LcpNfNg1D5.png" alt="" width="1920" height="1080" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_LcpNfNg1D5-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_LcpNfNg1D5-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_LcpNfNg1D5-md.png 768w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_LcpNfNg1D5-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_LcpNfNg1D5-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/16/responsive/Godot_v3.5.2-stable_win64_LcpNfNg1D5-2xl.png 1600w"></figure>
+<p>Selanjutnya, jalankan "Scene.tscn", jika belum dipilih sebagai default scene, maka pilihlah scene tersebut.</p>
+<p>Nanti dari layar akan tampil Cube jatuh dan tertahan Static Body di bawahnya.</p>
+<h2>Pembahasan</h2>
+<p>Apa yang terjadi barusan adalah, kita memiliki 2 jenis komponen fisika yang ada di Godot Engine 3.</p>
+<p>Itu adalah Static Body dan Rigid Body.</p>
+<p>Static Body adalah lantainya dan Rigid Body adalah Cube yang jatuh dari atas lantai.</p>
+<p>Tampak bahwa saat Rigid Body bersentuhan dengan Static Body, Static Body tidak terpengaruh sama sekali.</p>
+<p>Sementara itu, Rigid Body tertahan olehnya.</p>
+<p>Dengan kata lain, Static Body bisa menahan gerakan Rigid Body tetapi tidak terpengaruh oleh gaya di sekitarnya.</p>
+<h2>Penutup</h2>
+<p>Sekarang, seharusnya Anda sudah paham tentang Static Body dan sedikit tentang Rigid Body dan interaksi antara keduanya.</p>
+<p>Selanjutnya, silakan praktekkan sendiri.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Daftar Rumus-Rumus Penting untuk Game Dev</title>
+        <author>
+            <name>RAKIFSUL</name>
+        </author>
+        <link href="https://godot.rakifsul.my.id/daftar-rumus-rumus-penting-untuk-game-dev.html"/>
+        <id>https://godot.rakifsul.my.id/daftar-rumus-rumus-penting-untuk-game-dev.html</id>
+            <category term="Lain-Lain"/>
+
+        <updated>2023-12-09T03:12:53+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Belum ditulis.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Belum ditulis.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Contoh Project Godot Engine 3 - Nav Mesh Agent Sederhana</title>
         <author>
