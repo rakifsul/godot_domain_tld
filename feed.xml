@@ -3,7 +3,7 @@
     <title>RAKIFSUL GODOT</title>
     <link href="https://godot.rakifsul.my.id/feed.xml" rel="self" />
     <link href="https://godot.rakifsul.my.id" />
-    <updated>2023-12-10T21:03:11+07:00</updated>
+    <updated>2023-12-24T01:08:39+07:00</updated>
     <author>
         <name>RAKIFSUL</name>
     </author>
@@ -118,7 +118,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-nav-mesh-agent-sederhana.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-08T04:15:28+07:00</updated>
+        <updated>2023-12-24T01:06:14+07:00</updated>
             <summary>
                 <![CDATA[
                     Godot Engine 3 adalah game engine yang cukup lengkap fiturnya. Salah satu kelengkapannya dibuktikan dengan adanya fitur pathfinding. Fitur pathfinding tersebut diwujudkan dengan penggunaan Navigation Mesh atau NavMesh. Sayangnya, fitur tersebut belum dilengkapi dengan agent-nya. Jadi, belum ada NavMeshAgent di Godot Engine versi 3.4, setahu&hellip;
@@ -143,11 +143,9 @@
 <p>NavMeshAgent ini bekerja dengan mengubah input posisi target menjadi array posisi path node.</p>
 <p>Adapun posisi target diperoleh dengan mengubah posisi kursor di koordinat layar menjadi posisi di ruang 3D.</p>
 <p>Manfaat dari script ini adalah untuk memberikan gambaran kepada Anda tentang bagaimana memanfaatkan path yang ditemukan dari pathfinding dan menerapkannya pada agent.</p>
-<p>Disclaimer:</p>
-<ul>
-<li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Source code hanya teruji di Godot Engine 3.5.2 dan tidak dijamin bisa berjalan dengan benar.</li>
-</ul>
+<p>Berikut ini adalah screenshot project ini (hanya ilustrasi, hasil bisa beda):</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/13/Godot_v3.5.2-stable_win64_N9corXZDeM.png" alt="" width="1026" height="632" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/13/responsive/Godot_v3.5.2-stable_win64_N9corXZDeM-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/13/responsive/Godot_v3.5.2-stable_win64_N9corXZDeM-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/13/responsive/Godot_v3.5.2-stable_win64_N9corXZDeM-md.png 768w ,https://godot.rakifsul.my.id/media/posts/13/responsive/Godot_v3.5.2-stable_win64_N9corXZDeM-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/13/responsive/Godot_v3.5.2-stable_win64_N9corXZDeM-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/13/responsive/Godot_v3.5.2-stable_win64_N9corXZDeM-2xl.png 1600w"></figure>
+<p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-nav-mesh-agent-sederhana" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
             ]]>
         </content>
@@ -161,7 +159,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-predictive-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-08T04:16:18+07:00</updated>
+        <updated>2023-12-24T01:07:38+07:00</updated>
             <summary>
                 <![CDATA[
                     Jika Anda telah membaca postingan ini, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim. Di postingan tersebut, dijelaskan bahwa turret adalah meriam statis. Adapun meriam statis tersebut memiliki ujung berlubang tempat keluarnya peluru yang disebut muzzle. Di studi kasus ini, kita&hellip;
@@ -181,12 +179,9 @@
 <p>Adapun kalkulasi pada sistem turret ini lebih kompleks.</p>
 <p>Diharapkan setidaknya Anda telah mengenal gerak parabola di ilmu fisika.</p>
 <p>Itu karena kita akan mencari v0 dari gerak parabola tersebut.</p>
+<p>Berikut ini adalah screenshot project ini (hanya ilustrasi, hasil bisa beda):</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/12/Godot_v3.5.2-stable_win64_wLVlCzNHZx.png" alt="" width="1026" height="632" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/12/responsive/Godot_v3.5.2-stable_win64_wLVlCzNHZx-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/12/responsive/Godot_v3.5.2-stable_win64_wLVlCzNHZx-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/12/responsive/Godot_v3.5.2-stable_win64_wLVlCzNHZx-md.png 768w ,https://godot.rakifsul.my.id/media/posts/12/responsive/Godot_v3.5.2-stable_win64_wLVlCzNHZx-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/12/responsive/Godot_v3.5.2-stable_win64_wLVlCzNHZx-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/12/responsive/Godot_v3.5.2-stable_win64_wLVlCzNHZx-2xl.png 1600w"></figure>
 <p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
-<p>Disclaimer:</p>
-<ul>
-<li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Source code hanya teruji di Godot Engine 3.5.2 dan tidak dijamin bisa berjalan dengan benar.</li>
-</ul>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-predictive-turret-aim" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
             ]]>
         </content>
@@ -200,7 +195,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-simple-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-08T04:17:04+07:00</updated>
+        <updated>2023-12-24T01:08:39+07:00</updated>
             <summary>
                 <![CDATA[
                     Di dalam game yang ada fitur tembak menembaknya, tidak jarang digunakan turret. Turret adalah sejenis meriam yang posisinya biasanya statis, setidaknya itu definisi saya. Pada ujung turret ada sebuah bagian berlubang tempat keluarnya peluru yang disebut muzzle. Jadi, Anda bisa ambil mudahnya bahwa turret bisa&hellip;
@@ -224,12 +219,9 @@
 <p>Memang ada contoh project saya yang lainnya, yakni predictive turret aim.</p>
 <p>Tapi itu berbeda dengan yang ini, karena yang predictive tadi benar-benar merencanakan jatuhnya peluru pada titik yang ditunjuk kursor mouse.</p>
 <p>Kalkulasi dalam simple turret aim ini lebih sederhana daripada yang predictive.</p>
+<p>Berikut ini adalah screenshot project ini (hanya ilustrasi, hasil bisa beda):</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://godot.rakifsul.my.id/media/posts/11/Godot_v3.5.2-stable_win64_AMmRaUyZcM.png" alt="" width="1026" height="632" sizes="(max-width: 48em) 100vw, 768px" srcset="https://godot.rakifsul.my.id/media/posts/11/responsive/Godot_v3.5.2-stable_win64_AMmRaUyZcM-xs.png 300w ,https://godot.rakifsul.my.id/media/posts/11/responsive/Godot_v3.5.2-stable_win64_AMmRaUyZcM-sm.png 480w ,https://godot.rakifsul.my.id/media/posts/11/responsive/Godot_v3.5.2-stable_win64_AMmRaUyZcM-md.png 768w ,https://godot.rakifsul.my.id/media/posts/11/responsive/Godot_v3.5.2-stable_win64_AMmRaUyZcM-lg.png 1024w ,https://godot.rakifsul.my.id/media/posts/11/responsive/Godot_v3.5.2-stable_win64_AMmRaUyZcM-xl.png 1360w ,https://godot.rakifsul.my.id/media/posts/11/responsive/Godot_v3.5.2-stable_win64_AMmRaUyZcM-2xl.png 1600w"></figure>
 <p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
-<p>Disclaimer:</p>
-<ul>
-<li>Source code hanya teruji di Windows 11 dan tidak dijamin akan berjalan dengan benar.</li>
-<li>Source code hanya teruji di Godot Engine 3.5.2 dan tidak dijamin bisa berjalan dengan benar.</li>
-</ul>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-simple-turret-aim" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
             ]]>
         </content>
