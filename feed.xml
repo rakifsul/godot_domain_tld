@@ -3,7 +3,7 @@
     <title>RAKIFSUL GODOT</title>
     <link href="https://godot.rakifsul.my.id/feed.xml" rel="self" />
     <link href="https://godot.rakifsul.my.id" />
-    <updated>2023-12-25T06:38:22+07:00</updated>
+    <updated>2023-12-25T21:55:23+07:00</updated>
     <author>
         <name>RAKIFSUL</name>
     </author>
@@ -118,7 +118,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-nav-mesh-agent-sederhana.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-25T06:38:22+07:00</updated>
+        <updated>2023-12-25T21:48:56+07:00</updated>
             <summary>
                 <![CDATA[
                     Pendahuluan Godot Engine 3 adalah game engine yang cukup lengkap fiturnya. Salah satu kelengkapannya dibuktikan dengan adanya fitur pathfinding. Fitur pathfinding tersebut diwujudkan dengan penggunaan Navigation Mesh atau NavMesh. Sayangnya, fitur tersebut belum dilengkapi dengan agent-nya. Jadi, belum ada NavMeshAgent di Godot Engine versi 3.4,&hellip;
@@ -144,12 +144,15 @@
 <p>NavMeshAgent ini bekerja dengan mengubah input posisi target menjadi array posisi path node.</p>
 <p>Adapun posisi target diperoleh dengan mengubah posisi kursor di koordinat layar menjadi posisi di ruang 3D.</p>
 <p>Manfaat dari script ini adalah untuk memberikan gambaran kepada Anda tentang bagaimana memanfaatkan path yang ditemukan dari pathfinding dan menerapkannya pada agent.</p>
+<h2>Produk Apakah Ini?</h2>
+<p>Ini adalah produk contoh project Godot Engine 3 untuk membuat Nav Mesh Agent Sederhana.</p>
 <h2>Fitur</h2>
+<p>Sebagai contoh project, produk ini memiliki fitur berikut ini:</p>
 <ul>
-<li>Kode untuk mencari path ke arah target dan berjalan di sepanjangnya</li>
+<li>Contoh kode untuk mencari path ke arah target dan berjalan di sepanjangnya</li>
 </ul>
 <h2>Tampilan</h2>
-<p>Berikut ini adalah screencast project ini (hanya ilustrasi, hasil bisa beda):</p>
+<p>Berikut ini adalah screencast project ini jika bisa dijalankan dengan benar (hanya ilustrasi, hasil bisa beda):</p>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/Qyq2WNYywQo" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-nav-mesh-agent-sederhana" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
@@ -165,7 +168,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-predictive-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-25T06:37:17+07:00</updated>
+        <updated>2023-12-25T21:51:32+07:00</updated>
             <summary>
                 <![CDATA[
                     Pendahuluan Jika Anda telah membaca postingan ini, maka mungkin Anda sudah terbayang apa itu turret dan apa itu aim. Di postingan tersebut, dijelaskan bahwa turret adalah meriam statis. Adapun meriam statis tersebut memiliki ujung berlubang tempat keluarnya peluru yang disebut muzzle. Di studi kasus ini,&hellip;
@@ -186,12 +189,15 @@
 <p>Adapun kalkulasi pada sistem turret ini lebih kompleks.</p>
 <p>Diharapkan setidaknya Anda telah mengenal gerak parabola di ilmu fisika.</p>
 <p>Itu karena kita akan mencari v0 dari gerak parabola tersebut.</p>
+<h2>Produk Apakah Ini?</h2>
+<p>Ini adalah produk contoh project Godot Engine 3 untuk melakukan predictive turret aim.</p>
 <h2>Fitur</h2>
+<p>Sebagai contoh project, produk ini memiliki fitur ini:</p>
 <ul>
-<li>Kode untuk menargetkan projectile untuk mengenai mendekati posisi kursor saat menembak</li>
+<li>Contoh kode untuk menargetkan projectile untuk mengenai mendekati posisi kursor saat menembak.</li>
 </ul>
 <h2>Tampilan</h2>
-<p>Berikut ini adalah screencast project ini (hanya ilustrasi, hasil bisa beda):</p>
+<p>Berikut ini adalah screencast project ini jika berhasil dijalankan dengan benar (hanya ilustrasi, hasil bisa beda):</p>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/DdfG_fV8950" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-predictive-turret-aim" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
@@ -207,7 +213,7 @@
         <id>https://godot.rakifsul.my.id/contoh-project-godot-engine-3-simple-turret-aim.html</id>
             <category term="Premium"/>
 
-        <updated>2023-12-25T06:35:15+07:00</updated>
+        <updated>2023-12-25T21:55:23+07:00</updated>
             <summary>
                 <![CDATA[
                     Pendahuluan Di dalam game yang ada fitur tembak menembaknya, tidak jarang digunakan turret. Turret adalah sejenis meriam yang posisinya biasanya statis, setidaknya itu definisi saya. Pada ujung turret ada sebuah bagian berlubang tempat keluarnya peluru yang disebut muzzle. Jadi, Anda bisa ambil mudahnya bahwa turret&hellip;
@@ -229,15 +235,18 @@
 <p>Pada studi kasus ini, dibahas cara membidik turret agar muzzle-nya mengarah ke titik yang ditunjukkan kursor mouse pada ruang 3D dari world.</p>
 <p>Walaupun muzzle mengarah ke target tersebut, kita tidak bisa memastikan bahwa peluru akan persis berbentur ke sana, karena pelurunya berupa rigidbody yang terpengaruhi gravitasi.</p>
 <p>Karena itu juga sistem ini disebut sederhana.</p>
-<p>Memang ada contoh project saya yang lainnya, yakni predictive turret aim.</p>
-<p>Tapi itu berbeda dengan yang ini, karena yang predictive tadi benar-benar merencanakan jatuhnya peluru pada titik yang ditunjuk kursor mouse.</p>
+<p>Memang ada <a href="https://godot.rakifsul.my.id/contoh-project-godot-engine-3-predictive-turret-aim.html">contoh project saya yang lainnya</a>, yakni predictive turret aim.</p>
+<p>Tapi itu berbeda dengan yang ini, karena yang predictive tadi benar-benar merencanakan jatuhnya peluru mendekati titik yang ditunjuk kursor mouse.</p>
 <p>Kalkulasi dalam simple turret aim ini lebih sederhana daripada yang predictive.</p>
+<h2>Produk Apakah Ini?</h2>
+<p>Ini adalah produk contoh project Godot Engine 3 untuk simple turret aim.</p>
 <h2>Fitur</h2>
+<p>Sebagai contoh project, produk ini memiliki fitur berikut ini:</p>
 <ul>
-<li>Kode untuk membidik ke arah kursor</li>
+<li>Contoh kode untuk membidik ke arah kursor</li>
 </ul>
 <h2>Tampilan</h2>
-<p>Berikut ini adalah screencast project ini (hanya ilustrasi, hasil bisa beda):</p>
+<p>Berikut ini adalah screencast project ini jika bisa dijalankan dengan benar (hanya ilustrasi, hasil bisa beda):</p>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/cvcWuZjDmgU" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <p>Untuk mendapatkan contoh project ini, beli dengan klik tombol di bawah.</p>
 <p class="align-center"><a class="btn coba" style="width: 100%;" href="https://karyakarsa.com/rakifsul/contoh-project-godot-engine3-simple-turret-aim" target="_blank" rel="nofollow noopener noreferrer">beli sekarang</a></p>
